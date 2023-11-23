@@ -1,0 +1,157 @@
+@use "../utils" as u;
+
+#Services {
+  //background-color: red;
+  padding: clamp(2.5rem, 0.1774rem + 7.4324vw, 9.375rem) 0;
+  margin: 0 u.rem(20);
+
+  .services-wrapper {
+    max-width: u.rem(1216);
+    width: 100%;
+    margin-inline: auto;
+
+    display: flex;
+    gap: u.rem(30);
+
+    @media (max-width: u.rem(767)) {
+      flex-direction: column-reverse;
+    }
+
+    .services-image-cont {
+      background-image: url("../images/services/bg1.jpg");
+      height: clamp(21.375rem, 15.6951rem + 18.1757vw, 38.1875rem);
+      width: clamp(13.4336875rem, 9.864rem + 11.423vw, 24rem);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: u.rem(16);
+      position: relative;
+      .tooltips {
+        background-color: white;
+        width: clamp(9.625rem, 7.788rem + 5.8784vw, 15.0625rem);
+        height: clamp(2.8085rem, 2.2725rem + 1.7153vw, 4.395125rem);
+        border-radius: clamp(0.4680625rem, 0.3787rem + 0.2859vw, 0.7325rem);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+
+        position: absolute;
+        bottom: clamp(-2.1975625rem, -1.0593rem + -0.9198vw, -1.40425rem);
+        left: clamp(0.75rem, 0.3699rem + 1.2162vw, 1.875rem);
+
+        box-shadow: 14.65045px 29.30091px 58.60182px 0px rgba(45, 51, 81, 0.12);
+
+        @include u.breakpoint-max(medium) {
+          box-shadow: 9.3617px 18.7234px 37.44681px 0px rgba(45, 51, 81, 0.12);
+        }
+      }
+    }
+    .services-right {
+      @media (min-width: 768px) {
+        max-width: 62%;
+      }
+      .service-title {
+        display: flex;
+
+        @media (min-width: 768px) {
+          margin-top: u.rem(30);
+        }
+        @media (max-width: u.rem(767)) {
+          margin-bottom: u.rem(8);
+        }
+
+        .description {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: u.rem(12);
+
+          @media (max-width: u.rem(767)) {
+            all: unset;
+          }
+
+          p {
+            color: #757b8a;
+            font-family: "Haffer";
+            font-size: u.rem(14);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            max-width: u.rem(235);
+            width: 100%;
+          }
+        }
+      }
+      .slider-wrapper {
+        .sample-slider {
+          max-width: clamp(65.000625rem, 53.7888rem + 35.8777vw, 98.1875rem);
+          width: 100%;
+
+          position: absolute;
+          left: 32.5%;
+          margin-top: 2.5%;
+
+          @media (max-width: 767px) {
+            margin-top: 16%;
+            max-width: 490px;
+          }
+
+          .swiper-wrapper {
+            .swiper-slide {
+              height: clamp(11.25rem, 9.3497rem + 6.0811vw, 16.875rem);
+
+              border-radius: 4px;
+              border: 1px solid #e5e8ed;
+              background: #fff;
+              box-shadow: 0px 2px 4px 0px rgba(8, 27, 53, 0.1);
+
+              padding: clamp(0.875rem, 0.7483rem + 0.4054vw, 1.25rem);
+              display: flex;
+              flex-direction: column;
+
+              img {
+                width: u.rem(30);
+                margin-bottom: clamp(0.875rem, 0.7483rem + 0.4054vw, 1.25rem);
+              }
+              h3 {
+                color: #14212d;
+
+                font-family: "Haffer-SemiBold";
+                font-size: clamp(0.75rem, 0.6233rem + 0.4054vw, 1.125rem);
+                font-style: normal;
+                line-height: 24px;
+                position: relative;
+                padding-bottom: u.rem(8);
+                margin-bottom: u.rem(8);
+
+                &::after {
+                  content: "";
+                  display: block;
+                  height: 3px;
+                  width: 10%;
+                  background-color: #2277b9;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  @media (max-width: u.rem(767)) {
+                    width: 12.5%;
+                  }
+                }
+              }
+              p {
+                color: rgba(13, 20, 29, 0.7);
+                font-family: Lato;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 150% */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

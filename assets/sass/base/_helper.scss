@@ -1,0 +1,33 @@
+@use "../utils" as u;
+body {
+  font-family: "Haffer", sans-serif;
+  header {
+    background: linear-gradient(
+      180deg,
+      rgba(247, 248, 255, 0.12) 0%,
+      rgba(152, 197, 243, 0.12) 100%
+    );
+
+    backdrop-filter: blur(17px);
+  }
+  main {
+    position: relative;
+    overflow: hidden;
+  }
+}
+.container {
+  max-width: u.rem(1216);
+  @media (max-width: u.rem(767)) {
+    padding-left: u.rem(20);
+    padding-right: u.rem(20);
+  }
+}
+
+.sub-title {
+  color: #171725;
+  font-family: "Haffer-SemiBold";
+  font-size: clamp(1.5rem, 1.2889rem + 0.6757vw, 2.125rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
