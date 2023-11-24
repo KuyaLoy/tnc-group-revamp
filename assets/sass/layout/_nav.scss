@@ -4,7 +4,12 @@ nav.navbar {
   //min-height: u.rem(80);
   background-color: #fff;
   border-bottom: 1px solid #f2f4f7;
-  padding: u.rem(16.5) 0;
+  //padding: u.rem(16.5) 0;
+  padding: 0;
+
+  @media (max-width: u.rem(767)) {
+    padding: u.rem(16.5) 0;
+  }
 
   .container {
     .navbar-brand {
@@ -18,19 +23,33 @@ nav.navbar {
         gap: u.rem(10);
         .nav-item {
           position: relative;
+          @media (max-width: u.rem(767)) {
+            padding: unset;
+          }
           &:not(:last-child) {
             &::after {
               content: "";
               display: block;
               margin: auto;
-              height: 3px;
+              height: 5px;
               width: 0;
-              top: 5px;
+              //top: 5px;
               background: transparent;
               transition: all 0.3s;
+              top: 0px;
+              position: absolute;
+
+              @media (max-width: u.rem(767)) {
+                position: unset;
+                top: 5;
+                height: 3px;
+              }
             }
             &:hover,
             &.active {
+              .nav-link {
+                font-family: "Haffer-SemiBold";
+              }
               &::after {
                 width: 100%;
                 background: var(
@@ -46,6 +65,19 @@ nav.navbar {
               font-size: u.rem(16);
               font-style: normal;
               font-weight: 400;
+
+              @media (min-width: u.rem(768)) {
+                height: 80px;
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+          &:last-child {
+            @media (min-width: u.rem(768)) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
         }

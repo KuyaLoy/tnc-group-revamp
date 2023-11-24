@@ -31,3 +31,19 @@ body {
   font-weight: 600;
   line-height: 150%;
 }
+
+.ft-bd-bot {
+  @media (max-width: u.rem(767)) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 200%;
+      background-color: #d1d8dd;
+      bottom: 1px;
+      left: -50%;
+    }
+  }
+}
