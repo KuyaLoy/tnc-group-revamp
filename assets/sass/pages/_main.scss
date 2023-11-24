@@ -420,6 +420,10 @@
 
   #Offer {
     margin-bottom: clamp(2.5rem, 1.3996rem + 3.5211vw, 5.625rem);
+    background-image: url(../images/Offer/bg-map.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     .title-cont {
       h2 {
         color: #171725;
