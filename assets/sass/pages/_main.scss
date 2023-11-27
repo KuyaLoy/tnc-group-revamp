@@ -666,6 +666,7 @@
               color: #434e58;
               font-size: clamp(0.75rem, 0.706rem + 0.1408vw, 0.875rem);
               font-weight: 400;
+              line-height: normal;
 
               &:not(:last-child) {
                 margin-bottom: clamp(0.875rem, 0.831rem + 0.1408vw, 1rem);

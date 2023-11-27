@@ -1,0 +1,87 @@
+@use "../utils" as u;
+
+#privacy-terms-wrapper {
+  .container {
+    max-width: u.rem(720);
+  }
+
+  .privacy-terms-header {
+    text-align: center;
+    padding: u.rem(96) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      180deg,
+      rgba(247, 248, 255, 0.12) 0%,
+      rgba(152, 197, 243, 0.12) 100%
+    );
+
+    backdrop-filter: blur(17px);
+
+    span {
+      color: #2277b9;
+      font-family: "Haffer-SemiBold";
+      font-size: clamp(0.75rem, 0.662rem + 0.2817vw, 1rem);
+      margin-bottom: u.rem(12);
+      display: inline-block;
+    }
+    h2 {
+      color: #171725;
+      font-family: "Haffer-SemiBold";
+      font-size: clamp(1.875rem, 1.4789rem + 1.2676vw, 3rem);
+      font-weight: 600;
+      margin-bottom: u.rem(24);
+    }
+    p {
+      color: #66707a;
+      font-size: clamp(1rem, 0.912rem + 0.2817vw, 1.25rem);
+      line-height: clamp(1.5rem, 1.368rem + 0.4225vw, 1.875rem);
+      span {
+        font-family: "Haffer-SemiBold";
+      }
+    }
+  }
+  .privacy-terms-content {
+    padding: clamp(3.125rem, 2.4648rem + 2.1127vw, 5rem) 0;
+
+    .content {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      h3 {
+        color: #171725;
+        font-family: "Haffer-SemiBold";
+        font-size: clamp(1.5rem, 1.368rem + 0.4225vw, 1.875rem);
+        margin-bottom: 16px;
+      }
+      p {
+        color: #66707a;
+        font-size: clamp(0.875rem, 0.787rem + 0.2817vw, 1.125rem);
+        line-height: clamp(1.5rem, 1.412rem + 0.2817vw, 1.75rem);
+        span {
+          font-family: "Haffer-SemiBold";
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+      ul {
+        li {
+          color: #66707a;
+          font-size: clamp(0.875rem, 0.787rem + 0.2817vw, 1.125rem);
+          line-height: clamp(1.5rem, 1.412rem + 0.2817vw, 1.75rem);
+          &::before {
+            content: "•";
+            margin-right: 10px;
+          }
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
