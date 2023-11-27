@@ -74,7 +74,15 @@ nav.navbar {
             }
           }
           &:last-child {
+            &:hover {
+              .btn-cus {
+                color: white;
+              }
+            }
             @media (min-width: u.rem(768)) {
+              a {
+                width: u.rem(111);
+              }
               display: flex;
               align-items: center;
               justify-content: center;

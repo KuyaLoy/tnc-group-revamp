@@ -50,6 +50,9 @@ footer {
   .row-links {
     padding: clamp(2rem, 1.3838rem + 1.9718vw, 3.75rem)
       clamp(1.5rem, 0.9498rem + 1.7606vw, 3.0625rem);
+
+    //padding-bottom: clamp(1.875rem, 0.3345rem + 4.9296vw, 6.25rem);
+    padding-bottom: u.rem(30);
     border-bottom: 1px solid #d1d8dd;
     overflow: hidden;
 

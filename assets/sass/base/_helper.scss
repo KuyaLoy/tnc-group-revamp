@@ -1,5 +1,6 @@
 @use "../utils" as u;
 body {
+  padding-top: 80px !important;
   font-family: "Haffer", sans-serif;
   header {
     background: linear-gradient(
@@ -44,6 +45,53 @@ body {
       background-color: #d1d8dd;
       bottom: 1px;
       left: -50%;
+    }
+  }
+}
+
+.floating-object {
+  position: absolute !important;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &.fo-1 {
+    width: clamp(3.191875rem, 3.0716rem + 0.385vw, 3.5335625rem);
+    height: clamp(1.5640625rem, 1.5051rem + 0.1886vw, 1.7314375rem);
+
+    top: u.rem(-50);
+    left: clamp(-3.125rem, 1.1004rem + -3.5211vw, 0rem);
+  }
+
+  &.fo-2 {
+    color: unset !important;
+    font-size: unset !important;
+    padding-bottom: unset !important;
+    display: unset !important;
+    margin-bottom: unset !important;
+
+    width: clamp(3.773125rem, 3.3433rem + 1.3755vw, 4.993875rem);
+    //height: clamp(4.5771875rem, 4.0557rem + 1.6687vw, 6.0581875rem);
+
+    bottom: u.rem(-75);
+    left: u.rem(-75);
+
+    &::after {
+      all: unset !important;
+    }
+
+    @media (max-width: 767px) {
+      position: unset !important;
+      display: block !important;
+      width: 100px !important;
+      height: unset !important;
+      margin: 0 auto;
+      margin-top: -50px;
+      img {
+        height: auto !important;
+      }
     }
   }
 }

@@ -1,17 +1,39 @@
 @use "../utils" as u;
 
-#Services {
+#Solutions {
   //background-color: red;
   padding: clamp(2.5rem, 0.1774rem + 7.4324vw, 9.375rem) 0;
   margin: 0 u.rem(20);
+  position: relative;
 
   //min-height: 200vh;
 
   @media (max-width: u.rem(630)) {
     padding-bottom: 150px;
+    scroll-margin-top: 50px;
   }
 
-  .services-wrapper {
+  &::after {
+    content: "";
+    position: absolute;
+    //background: red;
+    bottom: 0;
+
+    right: -20px;
+    width: clamp(26.1875rem, 22.6004rem + 11.4789vw, 36.375rem);
+    height: clamp(25.375rem, 18.0026rem + 23.5915vw, 46.3125rem);
+    background-image: url(../images/solutions/bg-line-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @media (max-width: u.rem(767)) {
+      right: -265px;
+    }
+  }
+
+  .solutions-wrapper {
     max-width: u.rem(1216);
     width: 100%;
     margin-inline: auto;
@@ -23,8 +45,8 @@
       flex-direction: column-reverse;
     }
 
-    .services-image-cont {
-      background-image: url("../images/services/bg1.png");
+    .solutions-image-cont {
+      background-image: url("../images/solutions/bg1.png");
       height: clamp(21.375rem, 15.6951rem + 18.1757vw, 38.1875rem);
       width: clamp(13.4336875rem, 9.864rem + 11.423vw, 24rem);
       background-position: center;
@@ -87,7 +109,7 @@
         }
       }
     }
-    .services-right {
+    .solutions-right {
       @media (min-width: 768px) {
         max-width: 62%;
       }
@@ -237,19 +259,20 @@
   min-height: 100vh;
   padding-top: clamp(2.5rem, 1.7077rem + 2.5352vw, 4.75rem);
 
-  #Achievement {
+  #About-Us {
+    scroll-margin-top: 120px;
     margin-bottom: clamp(2.4375rem, 1.4472rem + 3.169vw, 5.25rem);
 
     .showcase-project {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr) 260px 1fr;
       grid-template-rows: 1fr;
-      grid-column-gap: clamp(1.125rem, -0.2394rem + 4.3662vw, 5rem);
+      grid-column-gap: clamp(3.75rem, 5.4167rem + -3.4722vw, 1.25rem);
       grid-row-gap: 32px;
 
       @media (max-width: 767px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        //grid-template-rows: repeat(3, 1fr);
       }
       @media (min-width: 768px) {
         margin-bottom: clamp(1.5625rem, 0.2641rem + 4.1549vw, 5.25rem);
@@ -261,20 +284,20 @@
         justify-content: flex-start;
         gap: clamp(0.75rem, 0.5739rem + 0.5634vw, 1.25rem);
 
-        @media (max-width: 768px) {
-          &:nth-child(1) {
-            grid-area: 1 / 1 / 2 / 2;
-          }
-          &:nth-child(2) {
-            grid-area: 2 / 1 / 3 / 2;
-          }
-          &:nth-child(3) {
-            grid-area: 3 / 1 / 4 / 2;
-          }
-          &:nth-child(4) {
-            grid-area: 1 / 2 / 2 / 3;
-          }
-        }
+        // @media (max-width: 768px) {
+        //   &:nth-child(1) {
+        //     grid-area: 1 / 1 / 2 / 2;
+        //   }
+        //   &:nth-child(2) {
+        //     grid-area: 2 / 1 / 3 / 2;
+        //   }
+        //   &:nth-child(3) {
+        //     grid-area: 3 / 1 / 4 / 2;
+        //   }
+        //   &:nth-child(4) {
+        //     grid-area: 1 / 2 / 2 / 3;
+        //   }
+        // }
 
         h3 {
           max-width: 50%;
@@ -418,12 +441,14 @@
     }
   }
 
-  #Offer {
+  #Services {
+    scroll-margin-top: 100px;
     margin-bottom: clamp(2.5rem, 1.3996rem + 3.5211vw, 5.625rem);
     background-image: url(../images/Offer/bg-map.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
     .title-cont {
       h2 {
         color: #171725;
@@ -480,6 +505,43 @@
         }
       }
     }
+    #toggleButton {
+      margin: 10px; /* Add margin for spacing */
+      width: 100%;
+      margin: 0 auto;
+      max-width: 176px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      border: 1px solid var(--Gradient, #e9442f);
+      margin-bottom: 40px;
+      background-color: white;
+
+      p {
+        background: var(
+          --Gradient,
+          linear-gradient(90deg, #e9442f 0%, #f29531 100%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      font-family: "Haffer";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 150% */
+    }
+
+    @media (min-width: 768px) {
+      /* Hide the button on screens wider than 768 pixels */
+      #toggleButton {
+        display: none;
+      }
+      scroll-margin-top: 120px;
+    }
     .hr-line {
       text-align: center;
       p {
@@ -497,24 +559,49 @@
         justify-content: center;
         position: relative;
 
-        &::after {
+        span {
           height: 1px;
           background-color: #ced4da;
           position: absolute;
           width: 100%;
-          content: "";
           z-index: 0;
         }
+
+        // &::after {
+        //   height: 1px;
+        //   background-color: #ced4da;
+        //   position: absolute;
+        //   width: 100%;
+        //   content: "";
+        //   z-index: 0;
+        // }
         a {
           max-width: u.rem(176);
           position: relative;
           z-index: 1;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 15px;
+            background: #f7f9ff;
+            left: -15px;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 15px;
+            background: #f7f9ff;
+            right: -15px;
+          }
         }
       }
     }
   }
 
-  #Projects {
+  #Portfolio {
     .project-list {
       .project-item {
         padding-top: clamp(5rem, 1.6197rem + 2.8169vw, 2.5rem);
@@ -539,6 +626,7 @@
 
         .description-cont {
           max-width: u.rem(534);
+          position: relative;
           span {
             color: #2277b9;
             font-size: clamp(0.75rem, 0.618rem + 0.4225vw, 1.125rem);
@@ -561,7 +649,7 @@
             color: #171725;
             font-family: "Haffer-SemiBold";
             font-size: clamp(1.5rem, 1.1479rem + 1.1268vw, 2.5rem);
-            margin-bottom: 16px;
+            margin-bottom: clamp(1rem, 0.8239rem + 0.5634vw, 1.5rem);
           }
           p {
             color: #66707a;
@@ -572,6 +660,26 @@
 
             width: 100%;
           }
+          ul {
+            margin-bottom: u.rem(32);
+            li {
+              color: #434e58;
+              font-size: clamp(0.75rem, 0.706rem + 0.1408vw, 0.875rem);
+              font-weight: 400;
+
+              &:not(:last-child) {
+                margin-bottom: clamp(0.875rem, 0.831rem + 0.1408vw, 1rem);
+              }
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              &::before {
+                content: "•";
+                margin-right: 10px;
+              }
+            }
+          }
           a {
             max-width: 170px;
           }
@@ -579,6 +687,7 @@
 
         .browser-frames {
           max-width: 569px;
+          position: relative;
           @media (max-width: 767px) {
             margin: 0 auto;
           }
@@ -587,6 +696,26 @@
           }
         }
         &.plastichero {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            //background: red;
+            bottom: 0;
+
+            left: -20px;
+            width: 257px;
+            height: 409px;
+            background-image: url(../images/project/bg-line-2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 0;
+
+            @media (max-width: u.rem(767)) {
+              display: none;
+            }
+          }
           .plhero {
             max-width: u.rem(556);
             position: relative;
@@ -651,6 +780,7 @@
               position: absolute;
               bottom: -10px;
               right: 0;
+
               ul {
                 li {
                   // display: flex;
@@ -733,6 +863,7 @@
     }
   }
   #Contact-Us {
+    scroll-margin-top: 120px;
     padding-bottom: clamp(5rem, 1.6197rem + 2.8169vw, 2.5rem);
     .contact-wrapper {
       background-image: url(../images/contact-us/bg-web.svg);
