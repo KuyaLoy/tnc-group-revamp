@@ -93,6 +93,8 @@
             height: 284px;
             flex-shrink: 0;
 
+            filter: drop-shadow(6px 4px 9px rgba(0, 0, 0, 0.12));
+
             z-index: 2;
             margin-top: clamp(-9.375rem, -7.3329rem + -1.6502vw, -8.125rem);
             margin-left: clamp(-10.625rem, -17.3577rem + 14.0264vw, 0rem);
@@ -117,6 +119,8 @@
             flex-shrink: 0;
 
             z-index: 3;
+
+            filter: drop-shadow(-6px 4px 9px rgba(0, 0, 0, 0.12));
 
             margin-right: clamp(-25rem, 1.547rem + -21.4521vw, -8.75rem);
             margin-bottom: u.rem(-150);
