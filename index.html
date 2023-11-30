@@ -27,15 +27,12 @@
     <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
   <body>
-    <!-- content here -->
     <nav class="navbar navbar-expand-md fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <!-- Your Logo (Replace 'Your Logo' with your actual logo path) -->
           <img src="./assets/images/tnc-group.png" alt="TNC Group logo" />
         </a>
 
-        <!-- Toggle button for mobile view -->
         <button
           class="navbar-toggler"
           type="button"
@@ -48,7 +45,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar items -->
         <div
           class="collapse navbar-collapse justify-content-end"
           id="navbarNav"
@@ -70,9 +66,6 @@
               <a class="nav-link" href="#Portfolio">Portfolio</a>
             </li>
 
-            <!-- Add more menu items as needed -->
-
-            <!-- Contact Button -->
             <li class="nav-item">
               <a class="nav-link btn-cus" href="#Contact-Us">CONTACT</a>
             </li>
@@ -644,7 +637,7 @@
                         </li>
                       </ul>
                       <a
-                        href="https://tncteams.com/"
+                        href="TNC-Teams.html"
                         target="_blank"
                         class="btn-cus"
                         data-aos="fade-up"
@@ -705,7 +698,7 @@
                         </li>
                       </ul>
                       <a
-                        href="https://plasticherocoin.com/"
+                        href="Plasticherocoin.html"
                         target="_blank"
                         class="btn-cus"
                         data-aos="fade-up"
@@ -1001,7 +994,7 @@
     </main>
 
     <footer>
-      <div class="container" data-aos="fade-in" data-aos-duration="2000">
+      <div class="container">
         <div class="row">
           <div class="col-md-4 company-wrapper">
             <div class="company-details">
@@ -1165,9 +1158,42 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scroll-nav.js"></script>
     <script src="./assets/js/counter.js"></script>
-
     <script src="./assets/js/offer-list.js"></script>
     <script src="./assets/js/save_email.js"></script>
+    <script>
+      $(function () {
+        const swiper = new Swiper(".sample-slider", {
+          loop: true,
+          slidesPerView: 1.6,
+          spaceBetween: 15,
+          navigation: {
+            nextEl: ".next-next",
+            prevEl: ".prev-prev",
+          },
+          //autoplay: true,
+          breakpoints: {
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+            1921: {
+              slidesPerView: 5,
+              spaceBetween: 24,
+            },
+          },
+        });
+        $("#vidBox2").VideoPopUp({
+          backgroundColor: "#17212a",
+          opener: "video1",
+          maxweight: "640",
+          idvideo: "v1",
+        });
+      });
+    </script>
   </body>
 </html>

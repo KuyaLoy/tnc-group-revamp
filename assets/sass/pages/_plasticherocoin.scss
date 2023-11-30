@@ -1,0 +1,192 @@
+#plasticherocoin-inner-wrapper {
+  .container {
+    padding-top: clamp(2.5rem, -0.625rem + 10vw, 5rem);
+    padding-bottom: clamp(2.5rem, -0.625rem + 10vw, 5rem);
+  }
+
+  .plasticherocoin-header {
+    min-height: 571px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.38) 0%,
+        rgba(0, 0, 0, 0.38) 100%
+      ),
+      url(../images/plasticherocoin/header-bg.png),
+      lightgray 0px 78.704px / 100% 147.465% no-repeat;
+
+    @media (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .left-cont {
+      color: white;
+      span {
+        font-family: "Lato";
+        font-size: 16px;
+        text-transform: capitalize;
+
+        margin-bottom: 8.5px;
+        display: inline-block;
+        position: relative;
+        width: fit-content;
+        padding-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 40%;
+          background-color: #2277b9;
+          height: 2px;
+          left: 0;
+        }
+      }
+      h2 {
+        font-family: "Haffer-SemiBold";
+        font-size: clamp(2rem, 0.9844rem + 3.25vw, 2.8125rem);
+        line-height: clamp(2.5rem, 1.5625rem + 3vw, 3.25rem);
+        text-transform: capitalize;
+        max-width: 520px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: clamp(1.125rem, 0.8125rem + 1vw, 1.375rem);
+        line-height: 135.5%; /* 29.81px */
+        max-width: 612px;
+        //margin: 0 auto;
+      }
+    }
+    .right-cont {
+      max-width: 439px;
+      width: 100%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .plasticherocoin-content {
+    .plasticherocoin-inner-product {
+      .container:first-child {
+        border-bottom: 1px solid hsla(221, 33%, 17%, 0.12);
+      }
+      .sec-1 {
+        .card-wrapper {
+          .card-item {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+
+            img {
+              width: 100%;
+              height: 60px;
+              object-fit: cover;
+            }
+
+            .text-cont {
+              p {
+                color: #1d263a;
+                font-family: "Haffer-Medium";
+                font-size: 18px;
+                margin-bottom: 12px;
+              }
+              span {
+                color: #1d263a;
+                font-size: 16px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+      .sec-2 {
+        .left-cont {
+          h3 {
+            color: #171725;
+            font-family: "Haffer-SemiBold";
+            font-size: clamp(2rem, 1.375rem + 2vw, 2.5rem);
+            margin-bottom: 24px;
+          }
+          p.desc {
+            color: #66707a;
+            font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+
+            line-height: 160%; /* 28.8px */
+            margin-bottom: 32px;
+            max-width: 354px;
+            width: 100%;
+          }
+          ul {
+            li {
+              display: flex;
+              gap: 24px;
+              margin-bottom: 55px;
+              span.ics {
+                width: 40px;
+                height: 40px;
+                background-color: #6ebe45;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+              }
+              .text-cont {
+                .min-title {
+                  color: #171725;
+                  font-family: "Haffer-Medium";
+                  font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
+                  line-height: normal;
+                  margin-bottom: 15px;
+                }
+                span {
+                  color: #66707a;
+                  font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+
+                  line-height: normal;
+                }
+              }
+            }
+          }
+        }
+        .right-cont {
+          max-width: 389px;
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
+          .float-1 {
+            position: absolute;
+            width: 130px;
+            height: 183px;
+            top: 28px;
+            left: 8px;
+          }
+          .float-2 {
+            position: absolute;
+            width: 147px;
+            height: 151px;
+            bottom: 40px;
+            right: -50px;
+          }
+        }
+      }
+    }
+    .plasticherocoin-inner-content {
+      background: linear-gradient(
+        180deg,
+        #f1f5ff 0%,
+        rgba(247, 249, 255, 0) 100%
+      );
+    }
+  }
+}

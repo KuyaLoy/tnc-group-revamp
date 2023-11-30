@@ -128,10 +128,118 @@ body {
     color: #171725;
     text-align: center;
     font-family: "Haffer-SemiBold";
-    font-size: 34px;
+    font-size: clamp(1.625rem, 1rem + 2vw, 2.125rem);
     line-height: 150%;
 
     max-width: 620px;
     margin: 0 auto;
+  }
+}
+.center-contact {
+  gap: 40px;
+  background: var(--Gradient, linear-gradient(90deg, #e9442f 0%, #f29531 100%));
+  position: relative;
+  // background-image: url(../images/tncteams/bg-line.svg);
+
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7.5px;
+    left: 0;
+    height: 115px;
+    width: 115px;
+    background-image: url(../images/tncteams/bg-line.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  min-height: 140px;
+
+  color: #fff;
+  font-family: "Haffer-Medium";
+  font-size: clamp(1.625rem, 1.537rem + 0.2817vw, 1.875rem);
+
+  @include u.breakpoint-max(small) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  a {
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 13px;
+  }
+}
+.accordion-wrapper {
+  .left-cont {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  ul.custom-accordion {
+    li.item {
+      padding: 0 30px;
+      position: relative;
+      border-bottom: 1px solid hsla(209, 37%, 13%, 0.05);
+
+      &.active {
+        padding-bottom: 20px;
+        &::before {
+          background: linear-gradient(90deg, #e9442f 0%, #f29531 100%);
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 2px;
+          left: 0;
+          top: 0;
+          bottom: 0;
+        }
+
+        h3 {
+          &::after {
+            background-image: url(../images/caret-up.svg);
+          }
+        }
+      }
+
+      h3 {
+        color: #171725;
+        font-family: "Haffer-Medium";
+        font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+        font-weight: 500;
+        line-height: 24px;
+        cursor: pointer;
+
+        padding: 20px 0px;
+
+        display: flex;
+        align-items: center;
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 6px;
+          width: 11px;
+          right: 20px;
+          background-image: url(../images/caret-down.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      p {
+        max-width: 555px;
+        width: 100%;
+        color: #66707a;
+        font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+        line-height: 24px; /* 150% */
+      }
+    }
   }
 }
